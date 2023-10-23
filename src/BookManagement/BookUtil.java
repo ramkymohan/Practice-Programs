@@ -1,3 +1,5 @@
+package BookManagement;
+
 import java.util.Scanner;
 public class BookUtil {
     public static void main(String[] args) {
@@ -5,7 +7,7 @@ public class BookUtil {
         Scanner scanner= new Scanner(System.in);
         while (true) {
             System.out.println("\nMenu: ");
-            System.out.println("1.Add Book");
+            System.out.println("1.Add BookManagement.Book");
             System.out.println("2.Search By Title");
             System.out.println("3.Search By Author");
             System.out.println("4.Display All Books");
@@ -16,7 +18,7 @@ public class BookUtil {
             switch (choice){
                 case 1:
                     try {
-                        System.out.println("Enter Book Id: ");
+                        System.out.println("Enter BookManagement.Book Id: ");
                         String bookId = scanner.nextLine();
                         System.out.println("Enter Title: ");
                         String title = scanner.nextLine();
@@ -29,7 +31,7 @@ public class BookUtil {
 
                         Book book = new Book(bookId,title,category,author,price);
                         bookStore.addBook(book);
-                        System.out.println("Book is successfully added ");
+                        System.out.println("BookManagement.Book is successfully added ");
                     }catch (InvalidBookException e){
                         System.out.println(e.getMessage());
                     }

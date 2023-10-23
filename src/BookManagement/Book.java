@@ -1,4 +1,4 @@
-import java.util.Objects;
+package BookManagement;
 
 public class Book {
     private String bookId;
@@ -9,7 +9,7 @@ public class Book {
 
     public Book(String bookId, String title, String author, String category, Float price) throws InvalidBookException {
 //        if (!category.equals("Science") && !category.equals("Fiction") && !category.equals("Technology") && !category.equals("Others")){
-//            throw new InvalidBookException("Category type is invalid.");
+//            throw new BookManagement.InvalidBookException("Category type is invalid.");
 //        }
         if(price<0){
             throw new InvalidBookException("Price cannot be negitive");

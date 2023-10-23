@@ -1,3 +1,5 @@
+package BookManagement;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +8,7 @@ public class BookStore {
     public  void addBook(Book b) throws InvalidBookException {
         for(Book book:book1){
             if(book.getBookId().equalsIgnoreCase(b.getBookId())){
-                throw new InvalidBookException("Book id must be unique");
+                throw new InvalidBookException("BookManagement.Book id must be unique");
             }
         }
         book1.add(b);
@@ -25,7 +27,7 @@ public class BookStore {
     public void SearchByAuthor(String author){
         for(Book book:book1){
             if(book.getAuthor().equalsIgnoreCase(author)){
-                System.out.println("Book is found");
+                System.out.println("BookManagement.Book is found");
                 printBook(book);
                 return;
             }
