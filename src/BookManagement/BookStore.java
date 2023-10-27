@@ -12,7 +12,6 @@ public class BookStore {
             }
         }
         book1.add(b);
-
     }
     public void searchByTitle(String title){
         for(Book book :book1){
